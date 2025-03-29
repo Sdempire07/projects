@@ -1,0 +1,171 @@
+/* General Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+header {
+    background: linear-gradient(to right, #cc87c1, #2eacce);
+    color: white;
+    padding: 20px ;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 10;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav h1 {
+    font-size: 1.8rem;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.2rem;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #f28e9f;
+}
+
+.top1 {
+    margin-top: 120px;
+    text-align: center;
+    font-size: 3rem;
+    color: #0713fd;
+}
+
+.top {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+}
+
+.top p {
+    width: 50%;
+    font-size: 1.2rem;
+    line-height: 1.8;
+    margin-right: 40px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.top img {
+    width: 300px;
+    border-radius: 20px;
+}
+section, div {
+    padding: 80px 5%;
+}
+
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #007bff;
+}
+
+ul li {
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 600px;
+}
+
+input, textarea, button {
+    padding: 15px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+.send{
+    background-color: #15507bea;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #ec6318;
+}
+#about{
+    background-color: #f2eded;
+}
+#skills{
+    background-color: #f2eded;
+}
+@media (max-width: 900px) {
+    .top {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .top p {
+        width: 100%;
+        margin-right: 0;
+    }
+
+    .top img {
+        margin-top: 20px;
+    }
+
+    nav ul li a {
+        font-size: 1rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 600px) {
+    nav {
+        flex-direction: column;
+        text-align: center;
+      }
+    
+      nav ul {
+        flex-direction: row;
+        padding: 0;
+      }
+    
+      nav li {
+        margin: 10px 0;
+      }
+    nav h1 {
+        font-size: 1.5rem;
+    }
+
+    .top1 {
+        font-size: 2.5rem;
+    }
+}

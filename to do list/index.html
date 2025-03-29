@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do-List</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="to-do-list-icon.jpg" type="image/x-icon">
+</head>
+<body>
+    <div class="list">
+        <h1>To-Do List</h1>
+        <div class="list2">
+          <input type="text" id="add" placeholder="Add a new task..." />
+          <button onclick="addTask()">Add</button>
+        </div>
+        <ul id="listadd"></ul>
+      </div>
+       <script>
+    function addTask() {
+      const input = document.getElementById('add');
+      const taskText = input.value.trim();
+      if (taskText === '') return;
+
+      const li = document.createElement('li');
+      const span = document.createElement('span');
+      span.textContent = taskText;
+      
+      const editBtn = document.createElement('button');
+      editBtn.textContent = 'Edit';
+      editBtn.onclick = function () {
+        const newText = prompt('Edit your task:', span.textContent);
+        if (newText !== null) {
+          span.textContent = newText.trim() || span.textContent;
+        }
+      };
+
+      const deleteBtn = document.createElement('button');
+      deleteBtn.textContent = 'Delete';
+      deleteBtn.onclick = function () {
+        li.remove();
+      };
+
+      li.appendChild(span);
+      li.appendChild(editBtn);
+      li.appendChild(deleteBtn);
+      document.getElementById('listadd').appendChild(li);
+
+      input.value = '';
+    }
+  </script>
+</body>
+</html>
